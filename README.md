@@ -24,9 +24,9 @@ Using data from Bristol and Birmingham, satellite data and ground data are compa
 
 ## Datasets
 - 2 sources of data were obtained. 1 kaggle dataset as described below
-- Satellite data was 
 - Source: [Link to dataset](https://www.kaggle.com/datasets/airqualityanthony/uk-defra-aurn-air-quality-data-2015-2023)
 - Description: .csv, 1.86GB, contains ground measurement data for UK air pollution between 2015 and 2023. It includes several pollutants including Carbon Monoxide, Nitrogen Oxides, Nitrogen Dioxide, Nitric Oxide, Ozone, and Sulphur Dioxide.
+- Satellite data from Copernicus was processed from raster pixels into a text-based format for analysis
 
 - Licensing is stated as other, with no further information in the description.
 
