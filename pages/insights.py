@@ -6,7 +6,7 @@ def run():
     st.title("Insights & Recommendations")
 
     # --- Load feature importance ---
-    fi = pd.read_csv("data/feature_importance_fd001.csv")
+    fi = pd.read_csv("data/feature_importance_aqbb.csv")
 
     st.markdown("### Feature Importance (Random Forest Regressor)")
     fig = px.bar(

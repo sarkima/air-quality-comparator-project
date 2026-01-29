@@ -6,7 +6,7 @@ import streamlit as st
 
 import pages.overview as overview
 import pages.insights as insights
-import pages.polutants_analysis as polutants_analysis
+import pages.pollutants_analysis as pollutants_analysis
 
 # --- Page title ---
 st.set_page_config(page_title="Air Quality Dashboard", layout="wide")
@@ -48,7 +48,7 @@ menu = st.sidebar.radio(
     "Go to",
     [
         "Overview",
-        "Polutants Analysis",
+        "Pollutants Analysis",
         "Insights & Recommendations"
     ]
 )
@@ -56,6 +56,6 @@ menu = st.sidebar.radio(
 if menu == "Overview":
     overview.run()
 elif menu == "Polutants Analysis":
-    polutants_analysis.run()
+    pollutants_analysis.run()
 elif menu == "Insights & Recommendations":
     insights.run()
