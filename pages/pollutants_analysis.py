@@ -1,4 +1,4 @@
- import streamlit as st
+import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -22,7 +22,7 @@ def run():
         step=1
     )
 
-    def["smooth"] = (
+    df["smooth"] = (
         df[selected_pollutant].rolling(window=smoothing, min_periods=1).mean()
     )
 
@@ -30,7 +30,7 @@ def run():
     st.markdown(f"### {selected_pollutant} Over Time (Interactive)")
     fig_sensor = px.line(
         df,
-        x="no2_datetime",
+        x="date",
         y="smooth",
         title=f"{selected_pollutant} (Smoothed)",
         markers=True
@@ -42,15 +42,15 @@ def run():
     st.write(df[selected_pollutant].describe())
 
     # --- Correlation heatmap ---
-    st.markdown("### Sensor Correlation Heatmap")
+    st.markdown("### Pollutant Correlation Heatmap")
 
-    corr = df[pollutant_cols].corr()
+    corr = df.drop(columns=["date", "true_nox", "pred_nox"]).corr()
 
     fig_heatmap = px.imshow(
         corr,
         text_auto=True,
         color_continuous_scale="RdBu_r",
-        title="Sensor Correlation Matrix"
+        title="Sensor Pollutant Correlation Matrix"
     )
 
     st.plotly_chart(fig_heatmap, use_container_width=True)

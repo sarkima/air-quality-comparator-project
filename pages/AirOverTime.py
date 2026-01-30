@@ -4,10 +4,10 @@ import plotly.graph_objects as go
 
 st.set_page_config(page_title="Air Quality Dashboard", layout="wide")
 
-df = pd.read_csv(r"data/air_brum_bris_cleaned_dates")
+df = pd.read_csv(r"data/air_brum_bris_cleaned_dates.csv")
 
 
-df = pd.read_csv(r"data/air_brum_bris_cleaned_dates",
+df = pd.read_csv(r"data/air_brum_bris_cleaned_dates.csv",
     parse_dates=["date"],
 )
 df = df.set_index("date")

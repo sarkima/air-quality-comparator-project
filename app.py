@@ -55,7 +55,7 @@ menu = st.sidebar.radio(
 
 if menu == "Overview":
     overview.run()
-elif menu == "Polutants Analysis":
+elif menu == "Pollutants Analysis":
     pollutants_analysis.run()
 elif menu == "Insights & Recommendations":
     insights.run()

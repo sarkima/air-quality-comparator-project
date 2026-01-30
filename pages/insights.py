@@ -27,7 +27,7 @@ def run():
     - High importance features are strong candidates for monitoring  
     """)
 
-        # --- Additional insights ---
+    # --- Additional insights ---
     st.markdown("### Key Insights")
     st.write("""
     - Random Forest identifies key features influencing NOx levels
